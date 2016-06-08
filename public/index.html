@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/justifiedGallery.custom.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body ng-controller="CommonCtrl as common">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <ul id="nav" class="nav navbar-nav">
+                <li id="nav-home" class="active"><a href="#/">Home</span></a></li>
+                <li id="nav-notes"><a href="#/notes">Notes</a></li>
+                <li id="nav-gallery"><a href="#/gallery">Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>{{ common.header }}</h2>
+        <div ng-view></div>
+    </div>
+    
+    <script type="text/javascript" src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.justifiedGallery.js"></script>
+    <script type="text/javascript" src="js/vendor/angular.min.js"></script>
+    <script type="text/javascript" src="js/vendor/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/vendor/ng-infinite-scroll.js"></script>
+
+    <script type="text/javascript" src="js/app/common/Common.js"></script>
+    <script type="text/javascript" src="js/app/common/controllers/CommonCtrl.js"></script>
+
+    <script type="text/javascript" src="js/app/home/Home.js"></script>
+    <script type="text/javascript" src="js/app/home/controllers/HomeCtrl.js"></script>
+    <script type="text/javascript" src="js/app/home/directives/myTabs.js"></script>
+    <script type="text/javascript" src="js/app/home/directives/myPane.js"></script>
+
+    <script type="text/javascript" src="js/app/notes/Notes.js"></script>
+    <script type="text/javascript" src="js/app/notes/controllers/NotesCtrl.js"></script>
+    <script type="text/javascript" src="js/app/notes/services/NotesService.js"></script>
+    <script type="text/javascript" src="js/app/notes/directives/myNote.js"></script>
+    <script type="text/javascript" src="js/app/notes/directives/myNotebook.js"></script>
+    
+    <script type="text/javascript" src="js/app/gallery/Gallery.js"></script>
+    <script type="text/javascript" src="js/app/gallery/services/GalleryService.js"></script>
+    <script type="text/javascript" src="js/app/gallery/controllers/GalleryCtrl.js"></script>
+    <script type="text/javascript" src="js/app/gallery/directives/imageWall.js"></script>
+    <script type="text/javascript" src="js/app/gallery/directives/repeatDone.js"></script>
+
+    <script type="text/javascript" src="js/app/app.js"></script>
+</body>
+</html>

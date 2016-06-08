@@ -1,0 +1,16 @@
+ <style>
+     .ui-state-highlight { background-color: #EEEEEE; }
+ </style>
+ <div class="page-header">
+    <h1>AngularJS Sticky Notes</h1>
+</div>
+<div class="form-actions">
+    <div class="input-append">
+        <form ng-submit="notes.addNote(noteTitle);notes.resetForm();">
+            <input class="span3" ng-model="notes.noteTitle" size="16" type="text" placeholder="Add a note">
+            <button class="btn btn-success" type="button"
+            ng-disabled="!notes.noteTitle" ng-click="notes.addNote(notes.noteTitle);notes.resetForm();">Add Note</button>   
+        </form>
+    </div>
+</div>
+<my-notebook notes="notes.getNotes()" ondelete="notes.deleteNote(id)"></my-notebook>
